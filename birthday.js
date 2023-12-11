@@ -6,6 +6,11 @@ const probability = {
   },
 };
 
+//“I en gruppe på X personer, med Y testgrupper, var det
+//en eller flere som delte bursdag i Z.ZZ% av testgruppene”
+
+//Y avgjør hvor nøyaktig oddsen er. Prøv X på 23
+//og Y på 50000 og se om prosenten lander på rett over 50.
 const button = document.getElementById("submit");
 
 button.addEventListener("click", onClick);
@@ -13,11 +18,13 @@ button.addEventListener("click", onClick);
 function onClick(event) {
   const days = 365,
     people = document.getElementById("people").value;
+  group = document.getElementById("group").value;
 
   document.getElementById("results").innerHTML =
-    "The probability of some pair having the same birthday in a set of " +
+    "In a group of" +
     people +
-    " people is " +
-    probability.exponentiation(days, people) +
-    "%.";
+    " with " +
+    group +
+    "test groups, there were two or more people who shared a birthday in ";
+  probability.exponentiation(days, people) + "% of the test groups.";
 }
