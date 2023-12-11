@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./collatz.js" defer></script>
-    <title>Document</title>
+    <title>Collatz</title>
   </head>
   <body>
+    <h1>Collatz conjecture calculator</h1>
+    <p>
+      The Collatz conjecture, also known as the 3n + 1 conjecture, is a
+      mathematical sequence defined by the following rule: Start with any
+      positive integer n. If n is even, divide it by 2; if n is odd, multiply it
+      by 3 and add 1. Repeat the process, and the conjecture posits that no
+      matter the starting value, the sequence will eventually reach the number
+      1.
+    </p>
     <input type="number" id="inputValue" />
     <button onclick="collatz()">Calculate</button>
     <p id="output"></p>
