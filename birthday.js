@@ -1,21 +1,28 @@
 const probability = {
-  exponentiation: function (d, n, Y) {
-    let totalProbability = 0;
+  calculation: function (days, number, groups) {
+    let sucessCount = 0;
 
-    for (let i = 0; i < Y; i++) {
-      const a = (n * (n - 1)) / 2,
-        b = (d - 1) / d;
-      const result = (1 - Math.pow(b, a)) * 100;
-      totalProbability += result;
+    for (let i = 0; i < groups; i++) {
+      let birthdays = new Set();
+      let sameBirthday = false;
+
+      for (let j = 0; j < number; j++) {
+        const randomBirthday = Math.floor(Math.random() * days) + 1;
+        if (birthdays.has(randomBirthday)) {
+          sameBirthday = true;
+          break;
+        }
+        birthdays.add(randomBirthday);
+      }
+
+      if (sameBirthday) {
+        sucessCount++;
+      }
     }
-
-    const averageProbability = (totalProbability / Y).toFixed(2);
-    return averageProbability;
+    const successProbability = (sucessCount / groups) * 100;
+    return successProbability.toFixed(2);
   },
 };
-
-// Andreas: average doesn't change depending on what number of runs you make
-//not sure if mathematical error or code
 
 //“I en gruppe på X personer, med Y testgrupper, var det
 //en eller flere som delte bursdag i Z.ZZ% av testgruppene”
@@ -31,14 +38,14 @@ function onClick(event) {
     people = document.getElementById("people").value;
   group = document.getElementById("group").value;
 
-  const result = probability.exponentiation(days, people, group);
+  const result = probability.calculation(days, people, group);
 
   document.getElementById("results").innerHTML =
     "The average probability of a pair having the same birthday in a set of " +
     people +
     " people over " +
     group +
-    "test groups, there were two or more people who shared a birthday in " +
-    probability.exponentiation(days, people) +
+    " test groups, there were two or more people who shared a birthday in " +
+    result +
     "% of the test groups.";
 }
