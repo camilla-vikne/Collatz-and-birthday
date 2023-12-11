@@ -14,6 +14,9 @@ const probability = {
   },
 };
 
+// Andreas: average doesn't change depending on what number of runs you make
+//not sure if mathematical error or code
+
 //“I en gruppe på X personer, med Y testgrupper, var det
 //en eller flere som delte bursdag i Z.ZZ% av testgruppene”
 
@@ -25,15 +28,17 @@ button.addEventListener("click", onClick);
 
 function onClick(event) {
   const days = 365,
-    people = document.getElementById("people").value;
+    people = document.getElementById("people").value,
     group = document.getElementById("group").value;
 
+  const result = probability.exponentiation(days, people, group);
+
   document.getElementById("results").innerHTML =
-    "In a group of" +
+    "The average probability of a pair having the same birthday in a set of " +
     people +
-    " with " +
+    " people over " +
     group +
-    "test groups, there were two or more people who shared a birthday in " +
-    probability.exponentiation(days, people) +
-    "% of the test groups.";
+    " groups is " +
+    result +
+    "%.";
 }
