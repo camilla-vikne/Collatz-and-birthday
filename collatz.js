@@ -6,6 +6,7 @@ function collatz() {
 
 function collatzFunction(n) {
   n = parseInt(n, 10);
+  const initalValue = n;
   let count = 0;
   let maxNumber = n;
   if (Number.isInteger(n) && n > 0) {
@@ -19,9 +20,12 @@ function collatzFunction(n) {
       console.log(n);
       maxNumber = Math.max(maxNumber, n);
     }
-    console.log(`Number of iterations: ${count}`);
-    console.log(`Highest number reached: ${maxNumber}`);
+    document.getElementById(
+      "output"
+    ).innerHTML = `${initalValue} used ${count} steps to reach 1, and the highest value reached was ${maxNumber}`;
   } else {
-    console.log("please enter a valid integer number");
+    document.getElementById(
+      "output"
+    ).innerHTML = `please enter a valid integer number`;
   }
 }
