@@ -28,8 +28,8 @@ button.addEventListener("click", onClick);
 
 function onClick(event) {
   const days = 365,
-    people = document.getElementById("people").value,
-    group = document.getElementById("group").value;
+    people = document.getElementById("people").value;
+  group = document.getElementById("group").value;
 
   const result = probability.exponentiation(days, people, group);
 
@@ -38,7 +38,7 @@ function onClick(event) {
     people +
     " people over " +
     group +
-    " groups is " +
-    result +
-    "%.";
+    "test groups, there were two or more people who shared a birthday in " +
+    probability.exponentiation(days, people) +
+    "% of the test groups.";
 }
