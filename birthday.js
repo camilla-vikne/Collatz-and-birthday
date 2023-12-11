@@ -25,6 +25,7 @@ function onClick(event) {
     people +
     " with " +
     group +
-    "test groups, there were two or more people who shared a birthday in ";
-  probability.exponentiation(days, people) + "% of the test groups.";
+    "test groups, there were two or more people who shared a birthday in " +
+    probability.exponentiation(days, people) +
+    "% of the test groups.";
 }
