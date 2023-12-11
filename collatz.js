@@ -1,11 +1,6 @@
 function collatz() {
   let inputNumber = document.getElementById("inputValue").value;
 
-  if (isNaN(inputNumber)) {
-    alert("Please enter a valid number.");
-    return;
-  }
-
   collatzFunction(inputNumber);
 }
 
