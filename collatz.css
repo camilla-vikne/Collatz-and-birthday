@@ -43,6 +43,7 @@ body p {
   border-radius: 5px;
   font-size: 17px;
   border: none;
+  text-indent: 5px;
 }
 
 .inputSection button {
