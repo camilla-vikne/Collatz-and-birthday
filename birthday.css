@@ -1,5 +1,6 @@
 body {
   background-color: #1f2028;
+  text-align: center;
 }
 
 .logo {
@@ -8,43 +9,57 @@ body {
   margin-top: 1.6rem;
 }
 
-button {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
-  width: 19.4rem;
-  border-radius: 1rem;
-  border: none;
+/* Andreas: Trying to get gradient to work on the hover from top to bottom. Krisitan made one that works from side to side but can't get the transition from top to bottom */
+
+/* button {
+  background: rgb(66, 113, 227);
+  background: linear-gradient(
+    180deg, rgba(66,113,227,1) 0%, rgba(166,79,217,1) 50%, 
+    rgba(202,67,214,1) 100%, 
+  );
+  background-size: 100% 200%;
+  background-position: top;
   color: white;
-  background-color: #656ade;
-  margin: 2rem 0rem;
+  border: none;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
+button:hover {
+  background-position: bottom;
+  
+} */
+
 h2 {
-    color: white;
-    font-size: 2rem;
+  color: white;
+  font-size: 2rem;
 }
 
 p {
-    color: white;
-    font-size: 1.6rem;
+  color: white;
+  font-size: 1.6rem;
 }
 
 label {
-    color: white;
-    font-size: 1.6rem;
+  color: white;
+  font-size: 1.6rem;
 }
 
 input {
-    width: 5rem;
-    height: 2rem;
-    margin: 1rem;
+  width: 5rem;
+  height: 2rem;
+  margin: 1rem;
 }
 
 #group {
-    margin-left: 5.3rem;
+  margin-left: 5.3rem;
 }
 
 #results {
-    color: white;
-    font-size: 1.6rem;
+  color: white;
+  font-size: 1.6rem;
 }
