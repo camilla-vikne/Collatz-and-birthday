@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body h1 {
+  margin-top: 2.5rem;
+  font-size: 7.68rem;
+}
+
+body .logo {
+  margin-top: 8.6rem;
+}
+
+body p {
+  color: white;
+  width: 80%;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
+}
+
+.inputContainer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.inputSection input {
+  width: 15rem;
+  height: 5rem;
+  background-color: #4e4f59;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  border: none;
+  text-indent: 5px;
+}
+
+.inputSection button {
+  background: rgb(202, 67, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 67, 214, 1) 2%,
+    rgba(166, 79, 217, 1) 20%,
+    rgba(101, 106, 222, 1) 45%,
+    rgba(101, 106, 222, 1) 100%
+  );
+  background-size: 200%;
+  background-position: right;
+  color: white;
+  border: none;
+  height: 5rem;
+  width: 15rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  margin-left: 6rem;
+}
+
+.inputSection button:hover {
+  background-position: left;
+}
+
+.inputSection input::placeholder {
+  font-size: 1.7rem;
+  text-indent: 5px;
+}
+
+.outputContainer p {
+  width: 80%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.outputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}

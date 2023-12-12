@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 10px">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./collatz.css" />
     <script src="./collatz.js" defer></script>
     <title>Collatz</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="logo">
+      <a href="./index.html"
+        ><img
+          src="./images/logo_purple.svg"
+          alt="Logo of a calculator in blue with light blue buttons"
+      /></a>
+    </div>
     <h1>Collatz conjecture calculator</h1>
-    <p>
-      The Collatz conjecture, also known as the 3n + 1 conjecture, is a
-      mathematical sequence defined by the following rule: Start with any
-      positive integer n. If n is even, divide it by 2; if n is odd, multiply it
-      by 3 and add 1. Repeat the process, and the conjecture posits that no
-      matter the starting value, the sequence will eventually reach the number
-      1.
-    </p>
-    <input type="number" id="inputValue" />
-    <button onclick="collatz()">Calculate</button>
-    <p id="output"></p>
+    <div class="paragraph">
+      <p>
+        The Collatz conjecture, also known as the 3n + 1 conjecture, is a
+        mathematical sequence defined by the following rule: Start with any
+        positive integer n. If n is even, divide it by 2; if n is odd, multiply
+        it by 3 and add 1. Repeat the process, and the conjecture posits that no
+        matter the starting value, the sequence will eventually reach the number
+        1.
+      </p>
+    </div>
+    <div class="inputContainer">
+      <div class="inputSection">
+        <input type="number" id="inputValue" placeholder="Input number..." />
+        <button onclick="collatz()">Calculate</button>
+      </div>
+      <div class="outputContainer">
+        <p id="output"></p>
+      </div>
+    </div>
   </body>
 </html>
