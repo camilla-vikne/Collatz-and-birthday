@@ -11,14 +11,21 @@
 
 <body>
   <div class="logo">
-    <img src="./images/logo_blue.svg" alt="Logo of a calculator in blue with light blue buttons" />
+    <img src="./images/logo_blue.svg" alt="Logo of a calculator in blue with light blue buttons" id="calc">
   </div>
   <h1>Collatz and birthday paradox calculator</h1>
 
   <div class="buttons">
+    <div class="col">
+      <a href="./collatz.html"> <button class="mainButtons collatz">Collatz</button></a>
+    </div>
+    <div class="bir">
+      <a href="./birthday.html"><button class="mainButtons birthday" id="birthdayButton">Birthday paradox</button></a>
+    </div>
+  </div>
+  <div class="cont">
     <div class="collatz">
-      <a href="./collatz.html"> <button id="collatzButton" class="mainButtons">Collatz</button></a>
-      <button id="readCollatz" class="collapsible">
+      <button id="readCollatz" class="collapseCol collatz">
         What is the Collatz Conjecture? <img src="./images/arrow_down.svg" alt="" />
       </button>
       <div class="content">
@@ -28,11 +35,7 @@
       </div>
     </div>
     <div class="birthday">
-      <a href="./birthday.html">
-        <button id="birthdayButton" class="mainButtons"></a>
-      Birthday paradox
-      </button>
-      <button id="readBirthday" class="collapsible">
+      <button id="readBirthday" class="collapseBir birthday">
         What is the Birthday Paradox? <img src="./images/arrow_down.svg" alt="" />
       </button>
       <div class="content">

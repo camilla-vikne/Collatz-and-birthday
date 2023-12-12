@@ -12,7 +12,9 @@ body {
   justify-content: center;
   margin-top: 8.6rem;
 }
-
+#calc {
+  height: 14.1rem;
+}
 h1 {
   color: white;
   text-align: center;
@@ -20,24 +22,23 @@ h1 {
   font-size: 4.8rem;
 }
 .buttons {
-  display: grid;
-  grid-template-areas: "left right";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-  margin-top: 8.6rem;
+  display: flex;
+  justify-content: space-around;
+}
+.col {
+  display: flex;
+  justify-content: center;
 }
 
-.collatz {
-  grid-area: "left";
-  text-align: center;
+.bir {
+  display: flex;
+  justify-content: center;
 }
-.birthday {
-  grid-area: "right";
-  text-align: center;
+.buttons #birthdayButton {
+  background-color: #8487c5;
 }
 
-.buttons .mainButtons {
+.mainButtons {
   font-size: 3rem;
   padding: 2.3rem 2.9rem;
   width: 31.8rem;
@@ -45,13 +46,26 @@ h1 {
   border: none;
   color: white;
   background-color: #656ade;
+  margin: 1rem;
+}
+.cont {
+  display: flex;
+  justify-content: space-around;
 }
 
-.buttons #birthdayButton {
-  background-color: #8487c5;
+#readCollatz {
+  background-color: #1f2028;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1.7rem;
 }
 
-#readCollatz,
 #readBirthday {
   background-color: #1f2028;
   color: white;
@@ -59,14 +73,19 @@ h1 {
   margin-top: 1rem;
   cursor: pointer;
   padding: 2rem;
-  width: 100%;
+  text-align: center;
   border: none;
   outline: none;
   font-size: 1.7rem;
-  text-align: center;
 }
-
-/* Style the collapsible content. Note: hidden by default */
+.active,
+#readBirthday:hover {
+  background-color: rgb(93, 93, 93);
+}
+.active,
+#readCollatz:hover {
+  background-color: rgb(93, 93, 93);
+}
 .content {
   padding: 0 2rem;
   background-color: #1f2028;
@@ -76,5 +95,40 @@ h1 {
   transition: max-height 0.2s ease-out;
   font-size: 1.7rem;
   max-width: 31.8rem;
-  text-align: center;
+  border: none;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-top: 3rem;
+  }
+
+  h1 {
+    margin-top: 3rem;
+    font-size: 3.6rem;
+  }
+
+  .mainButtons {
+    font-size: 2.5rem;
+    width: 28rem;
+    margin: 1rem;
+  }
+
+  #readCollatz {
+    font-size: 1.5rem;
+  }
+  .birthday {
+    max-width: fit-content;
+  }
+
+  #readBirthday {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 1.5rem;
+    max-width: 28rem;
+  }
 }
