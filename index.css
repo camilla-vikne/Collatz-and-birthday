@@ -24,15 +24,17 @@ h1 {
   grid-template-areas: "left right";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0;
+  gap: 1rem;
   margin-top: 8.6rem;
 }
 
 .collatz {
   grid-area: "left";
+  text-align: center;
 }
 .birthday {
   grid-area: "right";
+  text-align: center;
 }
 
 .buttons .mainButtons {
@@ -61,12 +63,7 @@ h1 {
   border: none;
   outline: none;
   font-size: 1.7rem;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc;
+  text-align: center;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -78,4 +75,6 @@ h1 {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   font-size: 1.7rem;
+  max-width: 31.8rem;
+  text-align: center;
 }
