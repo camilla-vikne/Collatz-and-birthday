@@ -7,6 +7,10 @@ body h1 {
   margin-top: 25px;
 }
 
+body .logo {
+  margin-top: 86px;
+}
+
 body p {
   color: white;
   width: 80%;
@@ -37,9 +41,8 @@ body p {
   background-color: #4e4f59;
   color: white;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 17px;
   border: none;
-  text-align: center;
 }
 
 .inputSection button {
@@ -61,11 +64,28 @@ body p {
   font-size: 18px;
   transition: 0.4s ease-in-out;
   cursor: pointer;
+  margin-left: 60px;
 }
 
 .inputSection button:hover {
   background-position: left;
 }
 
+.inputSection input::placeholder {
+  font-size: 17px;
+  text-indent: 5px;
+}
+
+.outputContainer p {
+  width: 80%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .outputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
