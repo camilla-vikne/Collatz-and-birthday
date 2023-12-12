@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 10px">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <script src="home.js" defer></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="logo">
-      <img
-        src="./images/logo_blue.svg"
-        alt="Logo of a calculator in blue with light blue buttons"
-      />
-    </div>
-    <h1>Collatz and birthday paradox calculator</h1>
-    <div class="buttons">
-      <div class="collatz">
-        <button id="collatzButton" class="mainButtons">Collatz</button>
-        <button id="readCollatz">
-          read more <img src="./images/arrow_down.svg" alt="" />
-        </button>
-      </div>
-      <div class="birthday">
-        <button id="birthdayButton" class="mainButtons">
-          Birthday paradox
-        </button>
-        <button id="readBirthday">
-          read more <img src="./images/arrow_down.svg" alt="" />
-        </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="home.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="./images/logo_blue.svg" alt="Logo of a calculator in blue with light blue buttons" />
+  </div>
+  <h1>Collatz and birthday paradox calculator</h1>
+  <div class="buttons">
+    <div class="collatz">
+      <a href="./collatz.html"> <button id="collatzButton" class="mainButtons">Collatz</button></a>
+      <button id="readCollatz" class="collapsible">
+        What is the Collatz Conjecture? <img src="./images/arrow_down.svg" alt="" />
+      </button>
+      <div class="content">
+        <p>The Collatz conjecture, named after Lother Collatz, holds that when applied to any positive value of n, it
+          will always
+          reach 1: If n is even, it is divided by two. If n is odd, it is multiplied by three and then added one.</p>
       </div>
     </div>
-  </body>
+    <div class="birthday">
+      <a href="./birthday.html">
+        <button id="birthdayButton" class="mainButtons"></a>
+      Birthday paradox
+      </button>
+      <button id="readBirthday" class="collapsible">
+        What is the Birthday Paradox? <img src="./images/arrow_down.svg" alt="" />
+      </button>
+      <div class="content">
+        <p>The birthday paradox, also known as the birthday problem, states that in a random group of 23 people, there
+          is about a
+          50 percent chance that two people have the same birthday.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
