@@ -43,13 +43,27 @@ body p {
 }
 
 .inputSection button {
-  background-color: #8487c5;
+  background: rgb(202, 67, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 67, 214, 1) 3%,
+    rgba(166, 79, 217, 1) 14%,
+    rgba(101, 106, 222, 1) 31%,
+    rgba(101, 106, 222, 1) 100%
+  );
+  background-size: 300%;
+  background-position: right;
   color: white;
   border: none;
   height: 50px;
   width: 150px;
   border-radius: 5px;
   font-size: 18px;
+  transition: 0.5s ease-in-out;
+}
+
+.inputSection button:hover {
+  background-position: left;
 }
 
 .outputContainer {
