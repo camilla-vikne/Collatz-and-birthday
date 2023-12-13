@@ -93,6 +93,17 @@ body p {
   margin-bottom: 5rem;
 }
 
+.screenReaderText {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 @media (max-width: 374px) {
   body h1 {
     font-size: 4rem;

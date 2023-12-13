@@ -6,60 +6,85 @@ body {
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: 1.6rem;
+  margin-top: 8rem;
 }
 
 /* Andreas: Trying to get gradient to work on the hover from top to bottom. Krisitan made one that works from side to side but can't get the transition from top to bottom */
-
-/* button {
-  background: rgb(66, 113, 227);
+#submit {
+  background: rgb(202, 67, 214);
   background: linear-gradient(
-    180deg, rgba(66,113,227,1) 0%, rgba(166,79,217,1) 50%, 
-    rgba(202,67,214,1) 100%, 
+    90deg,
+    rgba(202, 67, 214, 1) 2%,
+    rgba(166, 79, 217, 1) 20%,
+    rgba(101, 106, 222, 1) 45%,
+    rgba(101, 106, 222, 1) 100%
   );
-  background-size: 100% 200%;
-  background-position: top;
+  background-size: 200%;
+  background-position: right;
   color: white;
   border: none;
-  height: 50px;
-  width: 150px;
+  height: 5rem;
+  width: 22rem;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 2.4rem;
   transition: 0.4s ease-in-out;
   cursor: pointer;
+  margin-top: 3rem;
 }
 
-button:hover {
+#submit:hover {
   background-position: bottom;
-  
-} */
+}
 
-h2 {
+.title {
+  color: white;
+  font-size: 4rem;
+  margin-top: 6rem;
+}
+
+.desc {
   color: white;
   font-size: 2rem;
+  margin: 6rem 3rem;
 }
 
-p {
-  color: white;
-  font-size: 1.6rem;
+#inputForm {
+  margin-top: 6rem;
 }
 
 label {
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 input {
-  width: 5rem;
-  height: 2rem;
+  width: 6rem;
+  height: 2.5rem;
   margin: 1rem;
 }
 
 #group {
-  margin-left: 5.3rem;
+  margin-left: 6.3rem;
 }
 
 #results {
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  margin: 3rem;
+}
+
+@media screen and (max-width: 440px) {
+  #inputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #group {
+    margin-left: 1rem;
+  }
+
+  #submit {
+    width: 18rem;
+  }
 }
