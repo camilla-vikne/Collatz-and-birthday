@@ -1,4 +1,4 @@
-var coll = document.getElementsByClassName("collapseCol");
+var coll = document.getElementsByClassName("readCollatz");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -12,7 +12,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-var coll = document.getElementsByClassName("collapseBir");
+var coll = document.getElementsByClassName("readBirthday");
 var i;
 
 for (i = 0; i < coll.length; i++) {

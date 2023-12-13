@@ -1,6 +1,7 @@
 /* 1rem = 10px */
 /* NB!!! ^ */
 * {
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
@@ -21,21 +22,34 @@ h1 {
   margin-top: 8.6rem;
   font-size: 4.8rem;
 }
-.buttons {
-  display: flex;
-  justify-content: space-around;
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "collatz birthday";
+  gap: 3rem;
+  max-width: max-content;
+  flex-wrap: wrap;
+  margin: 8.3rem auto;
+  border: solid red;
+  padding: 1rem;
 }
-.col {
-  display: flex;
-  justify-content: center;
+.mainButtons {
+  font-size: 3rem;
+  padding: 2.3rem 2.9rem;
+  width: 31.8rem;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  background-color: #656ade;
+  cursor: pointer;
+  margin: 2rem 2rem;
 }
-
-.bir {
-  display: flex;
-  justify-content: center;
+.collatzContainer {
+  grid-area: "collatz";
+  border: solid blue;
 }
-
-.buttons .collatz {
+#collatzBtn {
   background: rgb(202, 67, 214);
   background: linear-gradient(
     270deg,
@@ -49,11 +63,40 @@ h1 {
   transition: 0.4s ease-in-out;
 }
 
-.buttons .collatz:hover {
+#collatzBtn:hover {
   background-position: right;
 }
-
-.buttons #birthdayButton {
+#readCollatz {
+  background-color: #1f2028;
+  color: white;
+  border: none;
+  margin: 2rem 2rem;
+  cursor: pointer;
+  padding: 2rem;
+  outline: none;
+  font-size: 1.7rem;
+}
+.active,
+#readCollatz:hover {
+  background-color: rgb(93, 93, 93);
+}
+.contentCollatz {
+  padding: 0 2rem;
+  background-color: #1f2028;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 1.7rem;
+  max-width: 31.8rem;
+  border: none;
+  margin: 0 auto;
+}
+.birthdayContainer {
+  grid-area: "birthday";
+  border: solid green;
+}
+#birthdayButton {
   background: rgb(202, 67, 214);
   background: linear-gradient(
     90deg,
@@ -66,38 +109,8 @@ h1 {
   background-position: right;
   transition: 0.4s ease-in-out;
 }
-
-.buttons #birthdayButton:hover {
+#birthdayButton:hover {
   background-position: left;
-}
-
-.mainButtons {
-  font-size: 3rem;
-  padding: 2.3rem 2.9rem;
-  width: 31.8rem;
-  border-radius: 1rem;
-  border: none;
-  color: white;
-  background-color: #656ade;
-  margin: 1rem;
-  cursor: pointer;
-}
-.cont {
-  display: flex;
-  justify-content: space-around;
-}
-
-#readCollatz {
-  background-color: #1f2028;
-  color: white;
-  border: none;
-  margin-top: 1rem;
-  cursor: pointer;
-  padding: 2rem;
-  text-align: center;
-  border: none;
-  outline: none;
-  font-size: 1.7rem;
 }
 
 #readBirthday {
@@ -107,7 +120,6 @@ h1 {
   margin-top: 1rem;
   cursor: pointer;
   padding: 2rem;
-  text-align: center;
   border: none;
   outline: none;
   font-size: 1.7rem;
@@ -116,11 +128,8 @@ h1 {
 #readBirthday:hover {
   background-color: rgb(93, 93, 93);
 }
-.active,
-#readCollatz:hover {
-  background-color: rgb(93, 93, 93);
-}
-.content {
+
+.contentBirthday {
   padding: 0 2rem;
   background-color: #1f2028;
   color: white;
@@ -134,35 +143,122 @@ h1 {
   text-align: left;
 }
 
-@media screen and (max-width: 700px) {
-  .logo {
-    margin-top: 3rem;
-  }
-
+@media screen and (max-width: 800px) {
   h1 {
     margin-top: 3rem;
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
-
+  .main {
+    gap: 2rem;
+    margin: 5rem auto;
+    border: solid red 3px;
+    padding: 0.5rem 0.5rem;
+  }
   .mainButtons {
     font-size: 2.5rem;
+    padding: 2.3rem 2.9rem;
     width: 28rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    background-color: #656ade;
     margin: 1rem;
+    cursor: pointer;
+  }
+  .collatzContainer {
+    grid-area: "collatz";
+  }
+  #collatzBtn {
+    background: rgb(202, 67, 214);
+    background: linear-gradient(
+      270deg,
+      rgba(202, 67, 214, 1) 2%,
+      rgba(166, 79, 217, 1) 20%,
+      rgba(101, 106, 222, 1) 45%,
+      rgba(101, 106, 222, 1) 100%
+    );
+    background-size: 200%;
+    background-position: left;
+    transition: 0.4s ease-in-out;
   }
 
-  #readCollatz {
-    font-size: 1.5rem;
+  #collatzBtn:hover {
+    background-position: right;
   }
-  .birthday {
-    max-width: fit-content;
+  #readCollatz {
+    background-color: #1f2028;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+  }
+  .active,
+  #readCollatz:hover {
+    background-color: rgb(93, 93, 93);
+  }
+  .contentCollatz {
+    padding: 0 2rem;
+    background-color: #1f2028;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 1.7rem;
+    max-width: 31.8rem;
+    border: none;
+    margin: 0 auto;
+  }
+  .birthdayContainer {
+    grid-area: "birthday";
+  }
+  #birthdayButton {
+    background: rgb(202, 67, 214);
+    background: linear-gradient(
+      90deg,
+      rgba(202, 67, 214, 1) 2%,
+      rgba(166, 79, 217, 1) 20%,
+      rgba(101, 106, 222, 1) 45%,
+      rgba(101, 106, 222, 1) 100%
+    );
+    background-size: 200%;
+    background-position: right;
+    transition: 0.4s ease-in-out;
+  }
+  #birthdayButton:hover {
+    background-position: left;
   }
 
   #readBirthday {
-    font-size: 1.5rem;
+    background-color: #1f2028;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+  }
+  .active,
+  #readBirthday:hover {
+    background-color: rgb(93, 93, 93);
   }
 
-  .content {
-    font-size: 1.5rem;
-    max-width: 28rem;
+  .contentBirthday {
+    padding: 0 2rem;
+    background-color: #1f2028;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 1.7rem;
+    max-width: 31.8rem;
+    border: none;
+    margin: 0 auto;
+    text-align: left;
   }
 }
