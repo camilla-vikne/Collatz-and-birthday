@@ -36,7 +36,7 @@ button.addEventListener("click", onClick);
 function onClick(event) {
   const days = 365,
     people = document.getElementById("people").value;
-  group = document.getElementById("group").value;
+    group = document.getElementById("group").value;
 
   const result = probability.calculation(days, people, group);
 

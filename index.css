@@ -48,6 +48,9 @@ h1 {
 .collatzContainer {
   grid-area: "collatz";
   border: solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #collatzBtn {
   background: rgb(202, 67, 214);
@@ -95,6 +98,9 @@ h1 {
 .birthdayContainer {
   grid-area: "birthday";
   border: solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #birthdayButton {
   background: rgb(202, 67, 214);
