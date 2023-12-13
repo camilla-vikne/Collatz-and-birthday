@@ -34,8 +34,41 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.buttons .collatz {
+  background: rgb(202, 67, 214);
+  background: linear-gradient(
+    270deg,
+    rgba(202, 67, 214, 1) 2%,
+    rgba(166, 79, 217, 1) 20%,
+    rgba(101, 106, 222, 1) 45%,
+    rgba(101, 106, 222, 1) 100%
+  );
+  background-size: 200%;
+  background-position: left;
+  transition: 0.4s ease-in-out;
+}
+
+.buttons .collatz:hover {
+  background-position: right;
+}
+
 .buttons #birthdayButton {
-  background-color: #8487c5;
+  background: rgb(202, 67, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 67, 214, 1) 2%,
+    rgba(166, 79, 217, 1) 20%,
+    rgba(101, 106, 222, 1) 45%,
+    rgba(101, 106, 222, 1) 100%
+  );
+  background-size: 200%;
+  background-position: right;
+  transition: 0.4s ease-in-out;
+}
+
+.buttons #birthdayButton:hover {
+  background-position: left;
 }
 
 .mainButtons {
@@ -47,6 +80,7 @@ h1 {
   color: white;
   background-color: #656ade;
   margin: 1rem;
+  cursor: pointer;
 }
 .cont {
   display: flex;
