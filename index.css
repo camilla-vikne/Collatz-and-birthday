@@ -8,6 +8,16 @@ body {
   background-color: #1f2028;
 }
 
+::selection {
+  color: rgba(101, 106, 222, 1);
+  /* color: rgba(202, 67, 214, 1); */
+}
+
+.mainButtons::selection {
+  color: rgb(202, 67, 214);
+  text-shadow: 0.2rem 0.2rem #1f2028;
+}
+
 .logo {
   display: flex;
   justify-content: center;

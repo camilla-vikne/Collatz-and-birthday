@@ -63,6 +63,16 @@ input:focus {
   outline: none;
 }
 
+::selection {
+  color: rgba(101, 106, 222, 1);
+  /* color: rgba(202, 67, 214, 1); */
+}
+
+#submit::selection {
+  color: rgb(202, 67, 214);
+  text-shadow: 0.1rem 0.1rem #1f2028;
+}
+
 #inputForm {
   margin-top: 6rem;
 }
