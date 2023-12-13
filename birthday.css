@@ -6,7 +6,11 @@ body {
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 8.6rem;
+}
+
+#calc {
+  height: 14.1rem;
 }
 
 /* Andreas: Trying to get gradient to work on the hover from top to bottom. Krisitan made one that works from side to side but can't get the transition from top to bottom */
@@ -33,19 +37,30 @@ body {
 }
 
 #submit:hover {
-  background-position: bottom;
+  background-position: left;
 }
 
 .title {
   color: white;
   font-size: 4rem;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 .desc {
   color: white;
   font-size: 2rem;
   margin: 6rem 3rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 #inputForm {

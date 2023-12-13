@@ -4,19 +4,24 @@
 }
 
 body h1 {
-  margin-top: 2.5rem;
-  font-size: 6rem;
+  margin-top: 8rem;
+  font-size: 4rem;
 }
 
-body .logo {
+.logo {
+  display: flex;
+  justify-content: center;
   margin-top: 8.6rem;
+}
+
+#calc {
+  height: 14.1rem;
 }
 
 body p {
   color: white;
-  width: 80%;
   text-align: center;
-  margin-top: 2.5rem;
+  margin: 6rem 3rem;
   font-size: 1.6rem;
 }
 
@@ -26,7 +31,7 @@ body p {
 }
 
 .inputContainer {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,12 +45,24 @@ body p {
 .inputSection input {
   width: 15rem;
   height: 5rem;
-  background-color: #4e4f59;
-  color: white;
+  /* Andreas: Wasn't completely sold on the grey background. */
+  /* but agree plain white might just look too vanilla */
+  /* background-color: #4e4f59;
+  color: white; */
   border-radius: 5px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   border: none;
   text-indent: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 .inputSection button {
@@ -75,7 +92,7 @@ body p {
 }
 
 .inputSection input::placeholder {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-indent: 5px;
 }
 
