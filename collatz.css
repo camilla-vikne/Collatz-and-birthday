@@ -55,14 +55,15 @@ body p {
   text-indent: 5px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 ::selection {
@@ -129,6 +130,11 @@ button::selection {
   overflow: hidden;
   padding: 0;
   position: absolute;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 374px) {
