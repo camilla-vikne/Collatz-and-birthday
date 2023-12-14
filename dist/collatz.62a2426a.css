@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body h1 {
+  margin-top: 8rem;
+  font-size: 4rem;
+}
+
+.logo {
+  justify-content: center;
+  margin-top: 8.6rem;
+  display: flex;
+}
+
+#calc {
+  height: 14.1rem;
+}
+
+body p {
+  color: #fff;
+  text-align: center;
+  margin: 6rem 3rem;
+  font-size: 1.6rem;
+}
+
+.paragraph {
+  justify-content: center;
+  display: flex;
+}
+
+.inputContainer {
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.inputSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.inputSection input {
+  text-indent: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 15rem;
+  height: 5rem;
+  font-size: 1.6rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+::selection {
+  color: #656ade;
+}
+
+button::selection {
+  color: #ca43d6;
+  text-shadow: .1rem .1rem #1f2028;
+}
+
+.inputSection button {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ca43d6 2%, #a64fd9 20%, #656ade 45% 100%) 100% / 200%;
+  border: none;
+  border-radius: 5px;
+  width: 15rem;
+  height: 5rem;
+  margin-left: 6rem;
+  font-size: 1.8rem;
+  transition: all .4s ease-in-out;
+}
+
+.inputSection button:hover {
+  background-position: 0;
+}
+
+.inputSection input::placeholder {
+  text-indent: 5px;
+  font-size: 1.6rem;
+}
+
+.outputContainer p {
+  text-align: center;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+.outputContainer {
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.screenReaderText {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.canvas {
+  justify-content: center;
+  display: flex;
+}
+
+@media (width <= 374px) {
+  body h1 {
+    font-size: 4rem;
+  }
+
+  .inputSection input {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .inputSection button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=collatz.62a2426a.css.map */

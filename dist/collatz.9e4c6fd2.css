@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #1f2028;
+}
+
+::selection {
+  color: #656ade;
+}
+
+.mainButtons::selection {
+  color: #ca43d6;
+  text-shadow: .2rem .2rem #1f2028;
+}
+
+.logo {
+  justify-content: center;
+  margin-top: 8.6rem;
+  display: flex;
+}
+
+#calc {
+  height: 14.1rem;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 8.6rem;
+  font-size: 4.8rem;
+}
+
+.main {
+  flex-wrap: wrap;
+  grid-template: "collatz birthday" 1fr
+  / 1fr 1fr;
+  gap: 3rem;
+  max-width: max-content;
+  margin: 8.3rem auto;
+  padding: 1rem;
+  display: grid;
+}
+
+.mainButtons {
+  color: #fff;
+  cursor: pointer;
+  background-color: #656ade;
+  border: none;
+  border-radius: 1rem;
+  width: 31.8rem;
+  margin: 2rem;
+  padding: 2.3rem 2.9rem;
+  font-size: 3rem;
+}
+
+.collatzContainer {
+  grid-area: "collatz";
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#collatzBtn {
+  background: linear-gradient(270deg, #ca43d6 2%, #a64fd9 20%, #656ade 45% 100%) 0 / 200%;
+  transition: all .4s ease-in-out;
+}
+
+#collatzBtn:hover {
+  background-position: 100%;
+}
+
+#readCollatz {
+  color: #fff;
+  cursor: pointer;
+  background-color: #1f2028;
+  border: none;
+  outline: none;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.active, #readCollatz:hover {
+  background-color: #5d5d5d;
+}
+
+.contentCollatz {
+  color: #fff;
+  background-color: #1f2028;
+  border: none;
+  max-width: 31.8rem;
+  max-height: 0;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  transition: max-height .2s ease-out;
+  overflow: hidden;
+}
+
+.birthdayContainer {
+  grid-area: "birthday";
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#birthdayButton {
+  background: linear-gradient(90deg, #ca43d6 2%, #a64fd9 20%, #656ade 45% 100%) 100% / 200%;
+  transition: all .4s ease-in-out;
+}
+
+#birthdayButton:hover {
+  background-position: 0;
+}
+
+#readBirthday {
+  color: #fff;
+  cursor: pointer;
+  background-color: #1f2028;
+  border: none;
+  outline: none;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.active, #readBirthday:hover {
+  background-color: #5d5d5d;
+}
+
+.contentBirthday {
+  color: #fff;
+  text-align: left;
+  background-color: #1f2028;
+  border: none;
+  max-width: 31.8rem;
+  max-height: 0;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  transition: max-height .2s ease-out;
+  overflow: hidden;
+}
+
+@media screen and (width <= 775px) {
+  .main {
+    gap: 2rem;
+  }
+
+  #readCollatz {
+    margin: .5rem;
+    font-size: 1.4rem;
+  }
+
+  .contentCollatz {
+    font-size: 1.4rem;
+  }
+
+  #readBirthday {
+    margin: .5rem;
+    font-size: 1.4rem;
+  }
+
+  .contentBirthday {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    margin-top: 5rem;
+  }
+
+  #calc {
+    height: 12rem;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .main {
+    grid-template: "collatz" 1fr
+                   "birthday" 1fr
+                   / 1fr;
+    gap: 2rem;
+    max-width: max-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+}
+
+/*# sourceMappingURL=collatz.9e4c6fd2.css.map */

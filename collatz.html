@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./collatz.css" />
-    <script src="./collatz.js" defer></script>
+    <script type="module" src="./acquisitions.js" defer></script>
     <title>Collatz</title>
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -13,7 +13,8 @@
       <a href="./index.html"
         ><img
           src="./images/logo_purple.svg"
-          alt="Logo of a calculator in blue with light blue buttons" id="calc"
+          alt="Logo of a calculator in blue with light blue buttons"
+          id="calc"
       /></a>
     </div>
     <h1>Collatz conjecture calculator</h1>
@@ -37,6 +38,11 @@
       </div>
       <div class="outputContainer">
         <p id="output"></p>
+      </div>
+    </div>
+    <div class="canvas">
+      <div style="width: 800px" class="canvasContainer">
+        <canvas id="acquisitions"></canvas>
       </div>
     </div>
   </body>
