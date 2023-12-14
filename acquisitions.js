@@ -1,6 +1,4 @@
-import Chart from "chart.js/auto";
-
-window.collatz = () => {
+collatz = () => {
   let inputNumber = document.getElementById("inputValue").value;
 
   collatzFunction(inputNumber);
