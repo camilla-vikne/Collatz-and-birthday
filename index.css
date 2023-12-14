@@ -186,6 +186,22 @@ h1 {
     font-size: 1.4rem;
   }
 }
+
+.dm-lm-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.light-mode {
+  background-color: #c7c7c7;
+  color: #1f2028;
+}
+
+.light-mode h1 {
+  color: #1f2028;
+}
+
 @media screen and (max-width: 775px) {
   .logo {
     margin-top: 5rem;
