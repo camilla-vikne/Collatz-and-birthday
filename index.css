@@ -158,6 +158,27 @@ h1 {
   text-align: left;
 }
 
+/* Lightmode */
+.dm-lm-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.light-mode {
+  background-color: #c7c7c7;
+  color: #1f2028;
+}
+
+.light-mode h1 {
+  color: #1f2028;
+}
+
+.light-mode .contentCollatz {
+  background-color: #c7c7c7;
+  color: black;
+}
+
 @media screen and (max-width: 775px) {
   .logo {
     margin-top: 5rem;
@@ -185,21 +206,6 @@ h1 {
   .contentBirthday {
     font-size: 1.4rem;
   }
-}
-
-.dm-lm-icon {
-  display: flex;
-  justify-content: flex-end;
-  margin: 20px;
-}
-
-.light-mode {
-  background-color: #c7c7c7;
-  color: #1f2028;
-}
-
-.light-mode h1 {
-  color: #1f2028;
 }
 
 @media screen and (max-width: 775px) {
