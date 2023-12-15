@@ -93,6 +93,15 @@ h1 {
 #readCollatz:hover {
   background-color: rgb(93, 93, 93);
 }
+/* lightmode info btn */
+.light-mode #readCollatz:hover {
+  background-color: #e4e5f1;
+  color: black;
+}
+
+.light-mode #readCollatz:hover .arrow-image {
+  background-color: #e4e5f1;
+}
 .contentCollatz {
   padding: 0 2rem;
   background-color: #1f2028;
@@ -140,8 +149,17 @@ h1 {
   font-size: 1.6rem;
 }
 .active,
-#readBirthday:hover {
+#readBirthday:hover, .light-mode #readBirthday:hover {
   background-color: rgb(93, 93, 93);
+}
+/* lightmode info btn */
+.light-mode #readBirthday:hover {
+  background-color: #e4e5f1;
+  color: black;
+}
+
+.light-mode #readBirthday:hover .arrow-image {
+  background-color: #e4e5f1;
 }
 
 .contentBirthday {
@@ -156,6 +174,42 @@ h1 {
   border: none;
   margin: 0 auto;
   text-align: left;
+}
+
+/* Lightmode */
+.dm-lm-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.light-mode {
+  background-color: #fafafa;
+  color: #1f2028;
+}
+
+.light-mode h1 {
+  color: #1f2028;
+}
+
+.light-mode .contentCollatz, .light-mode .contentBirthday {
+  background-color: #fafafa;
+  color: black;
+}
+
+.light-mode .arrow-image {
+  background-color: #fafafa;
+  color: black;
+  /* transition: background-color 0.3s; */
+}
+
+.light-mode #readCollatz, .light-mode #readBirthday {
+  background-color: #fafafa;
+  color: black;
+}
+
+.light-mode .mainButtons {
+  box-shadow: 0.1rem 0.1rem 1rem #1f2028;
 }
 
 @media screen and (max-width: 775px) {
@@ -185,21 +239,6 @@ h1 {
   .contentBirthday {
     font-size: 1.4rem;
   }
-}
-
-.dm-lm-icon {
-  display: flex;
-  justify-content: flex-end;
-  margin: 20px;
-}
-
-.light-mode {
-  background-color: #c7c7c7;
-  color: #1f2028;
-}
-
-.light-mode h1 {
-  color: #1f2028;
 }
 
 @media screen and (max-width: 775px) {

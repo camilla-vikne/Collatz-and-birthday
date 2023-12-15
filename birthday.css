@@ -98,6 +98,29 @@ input {
   margin: 3rem;
 }
 
+/* Lightmode */
+.dm-lm-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.light-mode {
+  background-color: #fafafa;
+  color: #1f2028;
+}
+
+.light-mode .title,
+.light-mode .desc,
+.light-mode label,
+.light-mode #results {
+  color: #1f2028;
+}
+
+.light-mode #submit {
+  box-shadow: 0.1rem 0.1rem 0.5rem #1f2028;
+}
+
 @media screen and (max-width: 440px) {
   #inputForm {
     display: flex;
