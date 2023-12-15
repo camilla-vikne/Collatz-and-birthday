@@ -49,3 +49,19 @@ function onClick(event) {
     result +
     "% of the test groups.";
 }
+
+//Lightmode
+function toggleStylesheet() {
+  const body = document.body;
+  const image = document.getElementById("dm-lm-btn");
+
+  if (body.classList.contains("dark-mode")) {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    image.src = "./images/purple_moon.svg";
+  } else {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    image.src = "./images/purple_sun.svg";
+  }
+}
