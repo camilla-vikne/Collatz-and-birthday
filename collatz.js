@@ -20,14 +20,12 @@ function collatzFunction(n) {
         n = 3 * n + 1;
       }
       count++;
-      console.log(n);
       maxNumber = Math.max(maxNumber, n);
       countArray.push({ count: count, value: n });
     }
     document.getElementById(
       "output"
     ).innerHTML = `${initalValue} used ${count} steps to reach 1, and the highest value reached was ${maxNumber}`;
-    console.log(countArray);
   } else {
     document.getElementById(
       "output"
@@ -58,6 +56,21 @@ function createChart() {
           data: data.map((row) => row.value),
         },
       ],
+    },
+    options: {
+      backgroundColor: "#a64fd9",
+      borderColor: "#a64fd9",
+      color: "white",
+      scales: {
+        y: {
+          ticks: { color: "white" },
+          grid: { color: "#1A1A1A" },
+        },
+        x: {
+          ticks: { color: "white" },
+          grid: { color: "#1A1A1A" },
+        },
+      },
     },
   });
 }

@@ -137,6 +137,10 @@ button::selection {
   justify-content: center;
 }
 
+.canvasContainer {
+  width: 80rem;
+}
+
 @media (max-width: 374px) {
   body h1 {
     font-size: 4rem;
@@ -152,5 +156,11 @@ button::selection {
   .inputSection button {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 830px) {
+  .canvasContainer {
+    width: 90%;
   }
 }
