@@ -5,6 +5,8 @@ collatz = () => {
 };
 
 let countArray = [];
+const body = document.body;
+let myChart;
 
 function collatzFunction(n) {
   countArray = [];
@@ -33,9 +35,8 @@ function collatzFunction(n) {
   }
   destroyChart();
   createChart();
+  modeChecker();
 }
-
-let myChart;
 
 function destroyChart() {
   if (myChart != null) {
@@ -75,9 +76,16 @@ function createChart() {
   });
 }
 
+function modeChecker() {
+  if (body.classList.contains("light-mode")) {
+    myChart.options.scales.y.ticks.color = "black";
+    myChart.options.scales.x.ticks.color = "black";
+    myChart.update();
+  }
+}
+
 //Lightmode
 function toggleStylesheet() {
-  const body = document.body;
   const image = document.getElementById("dm-lm-btn");
 
   if (body.classList.contains("dark-mode")) {
