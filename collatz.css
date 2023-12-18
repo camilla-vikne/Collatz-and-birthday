@@ -146,6 +146,7 @@ button::selection {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 
 .light-mode {
