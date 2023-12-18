@@ -138,7 +138,8 @@ button::selection {
 }
 
 .canvasContainer {
-  width: 80rem;
+  width: 100%;
+  max-width: 80rem;
 }
 
 /* Lightmode */
@@ -146,6 +147,7 @@ button::selection {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 
 .light-mode {
