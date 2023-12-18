@@ -80,6 +80,7 @@ function modeChecker() {
   if (body.classList.contains("light-mode")) {
     myChart.options.scales.y.ticks.color = "black";
     myChart.options.scales.x.ticks.color = "black";
+    myChart.options.color = "black";
     myChart.update();
   }
 }
@@ -95,6 +96,7 @@ function toggleStylesheet() {
     localStorage.setItem("isDarkMode", "false");
     myChart.options.scales.y.ticks.color = "black";
     myChart.options.scales.x.ticks.color = "black";
+    myChart.options.color = "black";
     myChart.update();
   } else {
     body.classList.remove("light-mode");
@@ -103,6 +105,7 @@ function toggleStylesheet() {
     localStorage.setItem("isDarkMode", "true");
     myChart.options.scales.y.ticks.color = "white";
     myChart.options.scales.x.ticks.color = "white";
+    myChart.options.color = "white";
     myChart.update();
   }
 }

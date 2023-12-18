@@ -149,7 +149,8 @@ h1 {
   font-size: 1.6rem;
 }
 .active,
-#readBirthday:hover, .light-mode #readBirthday:hover {
+#readBirthday:hover,
+.light-mode #readBirthday:hover {
   background-color: rgb(93, 93, 93);
 }
 /* lightmode info btn */
@@ -193,7 +194,8 @@ h1 {
   color: #1f2028;
 }
 
-.light-mode .contentCollatz, .light-mode .contentBirthday {
+.light-mode .contentCollatz,
+.light-mode .contentBirthday {
   background-color: #fafafa;
   color: black;
 }
@@ -204,7 +206,8 @@ h1 {
   /* transition: background-color 0.3s; */
 }
 
-.light-mode #readCollatz, .light-mode #readBirthday {
+.light-mode #readCollatz,
+.light-mode #readBirthday {
   background-color: #fafafa;
   color: black;
 }
