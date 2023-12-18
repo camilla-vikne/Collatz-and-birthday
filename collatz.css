@@ -140,6 +140,7 @@ button::selection {
 .canvasContainer {
   width: 100%;
   max-width: 80rem;
+  aspect-ratio: 2;
 }
 
 /* Lightmode */

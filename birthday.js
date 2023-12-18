@@ -36,7 +36,7 @@ button.addEventListener("click", onClick);
 function onClick(event) {
   const days = 365,
     people = document.getElementById("people").value;
-    group = document.getElementById("group").value;
+  group = document.getElementById("group").value;
 
   const result = probability.calculation(days, people, group);
 
@@ -59,23 +59,23 @@ function toggleStylesheet() {
     body.classList.remove("dark-mode");
     body.classList.add("light-mode");
     image.src = "./images/purple_moon.svg";
-    localStorage.setItem('isDarkMode', 'false');
-    } else {
+    localStorage.setItem("isDarkMode", "false");
+  } else {
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
     image.src = "./images/purple_sun.svg";
-    localStorage.setItem('isDarkMode', 'true'); 
+    localStorage.setItem("isDarkMode", "true");
   }
 }
 
-window.onload = function() {
-  const isDarkMode = localStorage.getItem('isDarkMode');
+window.onload = function () {
+  const isDarkMode = localStorage.getItem("isDarkMode");
 
-  if (isDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
+  if (isDarkMode === "true") {
+    document.body.classList.add("dark-mode");
+    document.body.classList.remove("light-mode");
   } else {
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('light-mode');
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
   }
 };

@@ -91,30 +91,30 @@ function toggleStylesheet() {
   if (body.classList.contains("dark-mode")) {
     body.classList.remove("dark-mode");
     body.classList.add("light-mode");
+    image.src = "./images/purple_moon.svg";
+    localStorage.setItem("isDarkMode", "false");
     myChart.options.scales.y.ticks.color = "black";
     myChart.options.scales.x.ticks.color = "black";
     myChart.update();
-    image.src = "./images/purple_moon.svg";
-    localStorage.setItem('isDarkMode', 'false');
-    } else {
+  } else {
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
+    image.src = "./images/purple_sun.svg";
+    localStorage.setItem("isDarkMode", "true");
     myChart.options.scales.y.ticks.color = "white";
     myChart.options.scales.x.ticks.color = "white";
     myChart.update();
-    image.src = "./images/purple_sun.svg";
-    localStorage.setItem('isDarkMode', 'true'); 
   }
 }
 
-window.onload = function() {
-  const isDarkMode = localStorage.getItem('isDarkMode');
+window.onload = function () {
+  const isDarkMode = localStorage.getItem("isDarkMode");
 
-  if (isDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
+  if (isDarkMode === "true") {
+    document.body.classList.add("dark-mode");
+    document.body.classList.remove("light-mode");
   } else {
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('light-mode');
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
   }
 };
