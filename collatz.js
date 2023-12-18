@@ -83,10 +83,16 @@ function toggleStylesheet() {
   if (body.classList.contains("dark-mode")) {
     body.classList.remove("dark-mode");
     body.classList.add("light-mode");
+    myChart.options.scales.y.ticks.color = "black";
+    myChart.options.scales.x.ticks.color = "black";
+    myChart.update();
     image.src = "./images/purple_moon.svg";
   } else {
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
+    myChart.options.scales.y.ticks.color = "white";
+    myChart.options.scales.x.ticks.color = "white";
+    myChart.update();
     image.src = "./images/purple_sun.svg";
   }
 }
