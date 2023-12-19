@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./collatz.css" />
-    <script type="module" src="./acquisitions.js" defer></script>
     <title>Collatz</title>
     <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"
+      defer
+    ></script>
+    <script src="./collatz.js" defer></script>
   </head>
   <body>
+    <div class="dm-lm-icon">
+      <img
+        id="dm-lm-btn"
+        src="./images/purple_sun.svg"
+        onclick="toggleStylesheet()"
+      />
+    </div>
     <div class="logo">
       <a href="./index.html"
         ><img
@@ -17,9 +28,9 @@
           id="calc"
       /></a>
     </div>
-    <h1>Collatz conjecture calculator</h1>
+    <h1 class="title">Collatz conjecture calculator</h1>
     <div class="paragraph">
-      <p>
+      <p class="desc">
         The Collatz conjecture, also known as the 3n + 1 conjecture, is a
         mathematical sequence defined by the following rule: Start with any
         positive integer n. If n is even, divide it by 2; if n is odd, multiply
@@ -34,14 +45,14 @@
           >Input whole integer number:</label
         >
         <input type="number" id="inputValue" placeholder="Input number.." />
-        <button onclick="collatz()">Calculate</button>
+        <button id="calc-btn" onclick="collatz()">Calculate</button>
       </div>
       <div class="outputContainer">
         <p id="output"></p>
       </div>
     </div>
     <div class="canvas">
-      <div style="width: 800px" class="canvasContainer">
+      <div class="canvasContainer">
         <canvas id="acquisitions"></canvas>
       </div>
     </div>
