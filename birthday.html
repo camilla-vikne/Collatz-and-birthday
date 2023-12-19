@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" style="font-size: 10px">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="birthday.js" defer></script>
-    <title>Birthday Paradox</title>
-    <link rel="stylesheet" href="birthday.css" />
-  </head>
 
-  <body>
-    <div class="dm-lm-icon">
-      <img
-        id="dm-lm-btn"
-        src="./images/purple_sun.svg"
-        onclick="toggleStylesheet()"
-      />
-    </div>
-    <div class="logo">
-      <a href="index.html"
-        ><img
-          src="./images/logo_purple.svg"
-          alt="Logo of a calculator in blue with light blue buttons"
-          id="calc"
-      /></a>
-    </div>
-    <div id="contents">
-      <h2 class="title">The Birthday Paradox</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="birthday.js" defer></script>
+  <title>Birthday Paradox</title>
+  <link rel="stylesheet" href="birthday.css" />
+</head>
 
-      <p class="desc">
-        There is a 50% probability that in a set of 23 randomly selected people
-        there is some pair that have the same birthday. (Assuming that each day
-        of the year, except 29 February, is equally probable for a birthday.)
-      </p>
-      <form id="inputForm" action="">
-        <label for="number" class="number">Number of People:</label>
-        <input type="number" id="people" value="" />
-        <br />
-        <label for="group">Test groups:</label>
-        <input type="number" id="group" value="" />
-      </form>
-      <button id="submit">Try it</button>
-      <div id="results"></div>
-    </div>
-  </body>
+<body>
+  <div class="dm-lm-icon">
+    <a href="index.html">
+      <img src="./images/home.svg" alt="A house icon that links to home"></a>
+    <img id="dm-lm-btn" src="./images/purple_sun.svg"
+      alt="A sun and moon icon that switches between dark and light mode when clicked" onclick="toggleStylesheet()" />
+  </div>
+  <div class="logo">
+    <a href="index.html"><img src="./images/logo_purple.svg" alt="Logo of a calculator in blue with light blue buttons"
+        id="calc" /></a>
+  </div>
+  <div id="contents">
+    <h2 class="title">The Birthday Paradox</h2>
+
+    <p class="desc">
+      There is a 50% probability that in a set of 23 randomly selected people
+      there is some pair that have the same birthday. (Assuming that each day
+      of the year, except 29 February, is equally probable for a birthday.)
+    </p>
+    <form id="inputForm" action="">
+      <label for="number" class="number">Number of People:</label>
+      <input type="number" id="people" value="" />
+      <br />
+      <label for="group">Test groups:</label>
+      <input type="number" id="group" value="" />
+    </form>
+    <button id="submit">Try it</button>
+    <div id="results"></div>
+  </div>
+</body>
+
 </html>

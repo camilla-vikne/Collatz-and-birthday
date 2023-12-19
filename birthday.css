@@ -101,7 +101,7 @@ input {
 /* Lightmode */
 .dm-lm-icon {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 20px;
   cursor: pointer;
 }
