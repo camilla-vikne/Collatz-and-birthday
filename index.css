@@ -178,7 +178,7 @@ h1 {
 }
 
 /* Lightmode */
-.dm-lm-icon {
+#home-dm-lm {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
