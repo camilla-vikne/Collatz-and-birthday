@@ -1,7 +1,12 @@
+let sucessCount = 0;
+let failureCount = 0;
+let myChart;
+const body = document.body;
+
 const probability = {
   calculation: function (days, number, groups) {
-    let sucessCount = 0;
-
+    failureCount = 0;
+    sucessCount = 0;
     for (let i = 0; i < groups; i++) {
       let birthdays = new Set();
       let sameBirthday = false;
@@ -17,6 +22,9 @@ const probability = {
 
       if (sameBirthday) {
         sucessCount++;
+      }
+      if (sameBirthday === false) {
+        failureCount++;
       }
     }
     const successProbability = (sucessCount / groups) * 100;
@@ -48,6 +56,48 @@ function onClick(event) {
     " test groups, there were two or more people who shared a birthday in " +
     result +
     "% of the test groups.";
+  destroyChart();
+  createChart();
+  modeChecker();
+}
+
+// Chart
+
+function destroyChart() {
+  if (myChart != null) {
+    myChart.destroy();
+  }
+}
+
+function createChart() {
+  const data = {
+    labels: ["Same Birthday", "Different Birthdays"],
+    datasets: [
+      {
+        label: "Value",
+        data: [sucessCount, failureCount],
+        backgroundColor: ["#a64fd9", "rgba(101, 106, 222, 1)"],
+        hoverOffset: 4,
+      },
+    ],
+  };
+  myChart = new Chart(document.getElementById("acquisitions"), {
+    type: "pie",
+    data: data,
+    options: {
+      backgroundColor: "#a64fd9",
+      borderColor: "#1f2028",
+      color: "white",
+    },
+  });
+}
+
+function modeChecker() {
+  if (body.classList.contains("light-mode")) {
+    myChart.options.borderColor = "#FFFFFF";
+    myChart.options.color = "black";
+    myChart.update();
+  }
 }
 
 //Lightmode
@@ -60,11 +110,17 @@ function toggleStylesheet() {
     body.classList.add("light-mode");
     image.src = "./images/purple_moon.svg";
     localStorage.setItem("isDarkMode", "false");
+    myChart.options.borderColor = "#FFFFFF";
+    myChart.options.color = "black";
+    myChart.update();
   } else {
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
     image.src = "./images/purple_sun.svg";
     localStorage.setItem("isDarkMode", "true");
+    myChart.options.borderColor = "#1f2028";
+    myChart.options.color = "#FFFFFF";
+    myChart.update();
   }
 }
 

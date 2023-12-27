@@ -98,6 +98,18 @@ input {
   margin: 3rem;
 }
 
+.canvas {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.canvasContainer {
+  width: 100%;
+  max-width: 50rem;
+  aspect-ratio: 1;
+}
+
 /* Lightmode */
 .dm-lm-icon {
   display: flex;
@@ -135,5 +147,11 @@ input {
 
   #submit {
     width: 18rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .canvasContainer {
+    width: 90%;
   }
 }
