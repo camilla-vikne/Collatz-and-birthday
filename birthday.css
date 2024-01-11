@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
   background-color: #1f2028;
   text-align: center;
